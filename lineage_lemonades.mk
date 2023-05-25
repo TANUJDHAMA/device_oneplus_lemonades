@@ -11,8 +11,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from lemonades device
 $(call inherit-product, device/oneplus/lemonades/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Rise stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+#RISE OS Stuff
+RISING_MAINTAINER := Tanuj
+TARGET_BUILD_APERTURE_CAMERA := false
+TARGET_ENABLE_BLUR := true
+TARGET_HAS_UDFPS := true
+TARGET_USE_PIXEL_FINGERPRINT := true
+WITH_GMS := true
+RISING_CHIPSET := 870
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_OPTOUT_GOOGLE_TELEPHONY := false
 
 PRODUCT_NAME := lineage_lemonades
 PRODUCT_DEVICE := lemonades
